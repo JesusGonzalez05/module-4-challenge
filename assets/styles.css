@@ -1,4 +1,9 @@
 /* target body to make the quiz card moveable on page */
+:root {
+--orange: hsl(37, 100%, 50%);
+--white: hsl(0, 100%, 100%);
+}
+
 body {
 display: flex;
 margin: 0px;
@@ -6,10 +11,77 @@ padding: 0px;
 justify-content: center;
 height: 100vh;
 align-items: center;
-
+background-color: var(--white);
 }
 
 .quiz-card {
-height: 300px;
+height: 55%; 
+width: 50%;
+padding: 10px;
+background-color: var(--white);
+border: 3px solid var(--orange);
+box-shadow: 0 0 5px 1px var(--orange);
+border-radius: 5px;
+}
 
+.answers {
+display: flex;
+flex-direction: column;
+}
+
+.btn {
+padding: 12px;
+margin: 8px;
+border: 1px solid var(--orange);
+background-color: var(--white);
+box-shadow: 0 0 1px 1px var(--orange);
+border-radius: 5px;
+}
+
+.btn:hover {
+background-color: var(--orange);
+box-shadow: 0 0 2px 1px black;
+border-radius: 5px;
+}
+
+.start{
+height: 25px;
+width: 80px;
+margin: 5px;
+color: white;
+border: 1px solid var(--orange);
+background-color: var(--orange);
+box-shadow: 0 0 1px .5px var(--orange);
+border-radius: 5px;
+}
+
+.start:hover{
+box-shadow: 0 0 2px 1px black;
+border-radius: 5px;
+}
+
+.next{
+height: 25px;
+width: 80px;
+margin: 5px;
+color: white;
+border: 1px solid var(--orange);
+background-color: var(--orange);
+box-shadow: 0 0 1px .5px var(--orange);
+border-radius: 5px;
+}
+
+.next:hover{
+box-shadow: 0 0 2px 1px black;
+border-radius: 5px;
+}
+
+h1 {
+text-align: center;    
+}
+.timer-message{
+color: var(--orange);
+text-align: end;
+padding: 10px;
+font-weight: bold;
 }
