@@ -13,8 +13,20 @@ height: 100vh;
 align-items: center;
 background-color: var(--white);
 }
-
+.start-page{
+height: 55%; 
+width: 50%;
+padding: 10px;
+background-color: var(--white);
+border: 3px solid var(--orange);
+box-shadow: 0 0 5px 1px var(--orange);
+border-radius: 5px;
+}
+.start-menu{
+text-align: center; 
+}
 .quiz-card {
+display: none;
 height: 55%; 
 width: 50%;
 padding: 10px;
@@ -47,12 +59,12 @@ border-radius: 5px;
 .start{
 height: 25px;
 width: 80px;
-margin: 5px;
 color: white;
 border: 1px solid var(--orange);
 background-color: var(--orange);
 box-shadow: 0 0 1px .5px var(--orange);
 border-radius: 5px;
+margin-left: 45%;
 }
 
 .start:hover{
@@ -76,7 +88,7 @@ box-shadow: 0 0 2px 1px black;
 border-radius: 5px;
 }
 
-h1 {
+h2 {
 text-align: center;    
 }
 .timer-message{

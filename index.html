@@ -8,27 +8,33 @@
     <title>Code Quiz</title>
 </head>
 <body>
-    <div class="quiz-card">
+    <div class="start-page" id="start-page">
+        <h1 class="start-menu" >Coding Quiz</h1>
+        <p class="start-menu">Try to correctly answer the following code-related question within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
+        <button id='start' class="start">Start</button>
+    </div>
+    <div class="quiz-card" id="quiz-card">
         <div class="multiple-choice">
 
-            <h1 class="question">question</h1>
+            <h2 class="question" id="questions">question</h1>
             <div class="timer">
                 <div class="timer-message">timer message</div>
             </div>
             
             <div class="answers">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">4</button>
+                <button class="btn" id="answer1">1</button>
+                <button class="btn" id="answer2">2</button>
+                <button class="btn" id="answer3">3</button>
+                <button class="btn" id="answer4">4</button>
             </div>
 
         </div>
 
         <div class="controls">
-            <button class="start">Start</button>
-            <button class="next">Next</button>
+            <!-- <button id='start' class="start">Start</button> -->
+            <button id='next' class="next">Next</button>
         </div>
     </div>
 </body>
+<script src="./assets/script.js"></script>
 </html>
