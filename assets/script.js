@@ -12,8 +12,27 @@ function startGame () {
 startPage.style.display = 'none';
 quizCard.style.display = 'block';
 questionOne();
+setTime();
 };
 
+var time = document.getElementById('timer');
+
+var secondsLeft = 30;
+
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    time.textContent = secondsLeft + " seconds left";
+
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      // Calls function to log score page
+    }
+
+  }, 1000);
+}
 // questions:
 var listOfQuestions = [
 {
@@ -74,9 +93,9 @@ answerOne.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
-        console.log('yay');
+        secondsLeft -= 5;
     }
-
+    questionTwo();
 });
 
 answerTwo.addEventListener('click', function(event){
@@ -84,9 +103,9 @@ answerTwo.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
-        console.log('nay');
+        secondsLeft -= 5;
     }
-
+    questionTwo();
 });
 
 answerThree.addEventListener('click', function(event){
@@ -94,9 +113,9 @@ answerThree.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
-        console.log('lay');
+        secondsLeft -= 5;
     }
-
+    questionTwo();
 });
 
 answerFour.addEventListener('click', function(event){
@@ -104,10 +123,10 @@ answerFour.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer4')){
         // write code for correct answer (penalize score and time)
-        answerFour.textContent = "Correct!";
-        questionTwo();
-    }
 
+        secondsLeft += 5;
+    }
+    questionTwo();
 });
 };
 
@@ -126,7 +145,8 @@ answerOne.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
-        console.log('yay');
+        secondsLeft -= 5;
+        questionThree();
     }
 
 });
@@ -136,7 +156,8 @@ answerTwo.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
-        console.log('nay');
+        secondsLeft -= 5;
+        questionThree();
     }
 
 });
@@ -146,7 +167,8 @@ answerThree.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
-        console.log('lay');
+        secondsLeft -= 5;
+        questionThree();
     }
 
 });
@@ -156,7 +178,7 @@ answerFour.addEventListener('click', function(event){
 
     if (userChoice.matches('#answer4')){
         // write code for correct answer (penalize score and time)
-        console.log('gay');
+        secondsLeft += 5;
         questionThree();
     }
 
@@ -178,7 +200,8 @@ answerOne.addEventListener('click', function(event){
     
   if (userChoice.matches('#answer1')){
     // write code for wrong answer (penalize score and time)
-    console.log('yay');
+    secondsLeft -= 5;
+    questionFour();
   }
 });
     
@@ -187,7 +210,8 @@ answerTwo.addEventListener('click', function(event){
       
   if (userChoice.matches('#answer2')){
     // write code for wrong answer (penalize score and time)
-    console.log('nay');
+    secondsLeft -= 5;
+    questionFour();
   } 
 });
     
@@ -196,7 +220,8 @@ answerThree.addEventListener('click', function(event){
   
   if (userChoice.matches('#answer3')){
     // write code for wrong answer (penalize score and time)
-    console.log('lay');
+    secondsLeft -= 5;
+    questionFour();
   }
 });
     
@@ -205,7 +230,7 @@ answerFour.addEventListener('click', function(event){
     
   if (userChoice.matches('#answer4')){
     // write code for correct answer (penalize score and time)
-    console.log('gay');
+    secondsLeft += 5;
     questionFour();
   }
 });
@@ -225,7 +250,8 @@ answerOne.addEventListener('click', function(event){
     
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
-        console.log('yay');
+        secondsLeft -= 5;
+        Scores();
     }
         
 });
@@ -235,7 +261,8 @@ answerTwo.addEventListener('click', function(event){
     
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
-        console.log('nay');
+        secondsLeft -= 5;
+        Scores();
     }
 });
         
@@ -244,7 +271,8 @@ answerThree.addEventListener('click', function(event){
     
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
-        console.log('lay');
+        secondsLeft -= 5;
+        Scores();
     }
 });
         
@@ -253,7 +281,7 @@ answerFour.addEventListener('click', function(event){
     
     if (userChoice.matches('#answer4')){
         // write code for correct answer (penalize score and time)
-        console.log('gay');
+        secondsLeft += 5;
         Scores();
     }
         
