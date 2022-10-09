@@ -97,3 +97,16 @@ text-align: end;
 padding: 10px;
 font-weight: bold;
 }
+.score-page{
+display: none;
+height: 55%; 
+width: 50%;
+padding: 10px;
+background-color: var(--white);
+border: 3px solid var(--orange);
+box-shadow: 0 0 5px 1px var(--orange);
+border-radius: 5px;
+}
+.score-menu{
+text-align: center; 
+}

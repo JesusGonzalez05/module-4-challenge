@@ -18,6 +18,7 @@ setTime();
 var time = document.getElementById('timer');
 
 var secondsLeft = 30;
+var userScore = 0;
 
 function setTime() {
   // Sets interval in variable
@@ -94,6 +95,7 @@ answerOne.addEventListener('click', function(event){
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
     }
     questionTwo();
 });
@@ -104,6 +106,7 @@ answerTwo.addEventListener('click', function(event){
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
     }
     questionTwo();
 });
@@ -114,6 +117,7 @@ answerThree.addEventListener('click', function(event){
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
     }
     questionTwo();
 });
@@ -125,6 +129,7 @@ answerFour.addEventListener('click', function(event){
         // write code for correct answer (penalize score and time)
 
         secondsLeft += 5;
+        userScore += 5;
     }
     questionTwo();
 });
@@ -146,6 +151,7 @@ answerOne.addEventListener('click', function(event){
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         questionThree();
     }
 
@@ -157,6 +163,7 @@ answerTwo.addEventListener('click', function(event){
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         questionThree();
     }
 
@@ -168,6 +175,7 @@ answerThree.addEventListener('click', function(event){
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         questionThree();
     }
 
@@ -179,6 +187,7 @@ answerFour.addEventListener('click', function(event){
     if (userChoice.matches('#answer4')){
         // write code for correct answer (penalize score and time)
         secondsLeft += 5;
+        userScore += 5;
         questionThree();
     }
 
@@ -201,6 +210,7 @@ answerOne.addEventListener('click', function(event){
   if (userChoice.matches('#answer1')){
     // write code for wrong answer (penalize score and time)
     secondsLeft -= 5;
+    userScore -= 5;
     questionFour();
   }
 });
@@ -211,6 +221,7 @@ answerTwo.addEventListener('click', function(event){
   if (userChoice.matches('#answer2')){
     // write code for wrong answer (penalize score and time)
     secondsLeft -= 5;
+    userScore -= 5;
     questionFour();
   } 
 });
@@ -221,6 +232,7 @@ answerThree.addEventListener('click', function(event){
   if (userChoice.matches('#answer3')){
     // write code for wrong answer (penalize score and time)
     secondsLeft -= 5;
+    userScore -= 5;
     questionFour();
   }
 });
@@ -231,6 +243,7 @@ answerFour.addEventListener('click', function(event){
   if (userChoice.matches('#answer4')){
     // write code for correct answer (penalize score and time)
     secondsLeft += 5;
+    userScore += 5;
     questionFour();
   }
 });
@@ -251,6 +264,7 @@ answerOne.addEventListener('click', function(event){
     if (userChoice.matches('#answer1')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         Scores();
     }
         
@@ -262,6 +276,7 @@ answerTwo.addEventListener('click', function(event){
     if (userChoice.matches('#answer2')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         Scores();
     }
 });
@@ -272,6 +287,7 @@ answerThree.addEventListener('click', function(event){
     if (userChoice.matches('#answer3')){
         // write code for wrong answer (penalize score and time)
         secondsLeft -= 5;
+        userScore -= 5;
         Scores();
     }
 });
@@ -282,6 +298,7 @@ answerFour.addEventListener('click', function(event){
     if (userChoice.matches('#answer4')){
         // write code for correct answer (penalize score and time)
         secondsLeft += 5;
+        userScore += 5;
         Scores();
     }
         
@@ -289,6 +306,10 @@ answerFour.addEventListener('click', function(event){
         
 }
 
-// display user starter score 
 // display time and start
 
+var scorePage = document.getElementById('score-page')
+function Scores () {
+    quizCard.style.display = 'none';
+    scorePage.style.display = 'block';
+    };
